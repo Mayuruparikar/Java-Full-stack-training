@@ -1,5 +1,7 @@
 package com.training.training.ref.cons;
 @FunctionalInterface
 public interface Provider {
-    void getstudent();
+
+    // this abs method will return the object of class student
+    student getstudent();
 }
