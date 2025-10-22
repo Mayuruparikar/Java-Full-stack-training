@@ -1,4 +1,4 @@
-package com.training.training;
+package com.training.training.collection;
 import java.util.LinkedList;
 import java.util.Collections;
 

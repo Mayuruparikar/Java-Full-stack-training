@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active: dev,prod
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+server:
+  port: 8089
+
+dev:
+  user: devu
+  password: passdev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+server:
+  port: 9898
+
+prod:
+  user: produ
+  password: passprod

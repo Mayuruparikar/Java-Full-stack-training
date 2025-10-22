@@ -1,4 +1,4 @@
-package com.training.training;
+package com.training.training.collection;
 
 import java.util.Vector;
 import java.util.Collections;
