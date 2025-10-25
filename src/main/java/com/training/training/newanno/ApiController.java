@@ -33,7 +33,7 @@ public class ApiController {
         return lazyService.lazyMessage();
     }
 
-    @GetMapping("/owner-info")
+    @GetMapping(path="/owner-info")
     public String ownerDetails() {
         return propertyService.ownerInfo();
     }

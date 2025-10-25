@@ -1,4 +1,5 @@
 package com.training.training.newspringbootpro;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -14,10 +15,18 @@ public class UserService {
     private UserRepository backupRepo; // manual choice
 
     public User getPrimaryUser(int id) {
-        return primaryRepo.getUser(id);
+        User user = primaryRepo.getUser(id);
+        if (user == null) {
+            throw new UserNotFoundException("Primary user not found with ID: " + id);
+        }
+        return user;
     }
 
     public User getBackupUser(int id) {
-        return backupRepo.getUser(id);
+        User user = backupRepo.getUser(id);
+        if (user == null) {
+            throw new UserNotFoundException("Backup user not found with ID: " + id);
+        }
+        return user;
     }
 }
